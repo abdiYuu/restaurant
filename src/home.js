@@ -20,7 +20,7 @@ function makeHome() {
 	hero_txt.classList.add('hero_txt');
 
 	const about = document.createElement('p');
-	about.innerText = 'Welcome to Krakatoa!';
+	about.innerText = 'Welcome to Molokai';
 	hero_txt.appendChild(about);
 
 	hero.appendChild(hero_txt);
