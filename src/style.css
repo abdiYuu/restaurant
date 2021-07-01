@@ -6,7 +6,7 @@
 }
 
 .hero {
-	width:80;
+	width:90%;
 	height:80%;
 	margin:auto;
 	display:flex;
@@ -14,9 +14,13 @@
 }
 
 .hero_img {
-	width:30%;
+	width:50%;
 	height:100%;
 	border:1px solid red;
+}
+
+.hero_text {
+	width:60%;
 }
 
 img {
