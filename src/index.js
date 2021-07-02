@@ -1,7 +1,7 @@
 'use strict'
 import {makeHome} from './home.js';
-import menuPage from './menu.js';
-import contactPage from './contact.js'
+import {makeMenu} from './menu.js';
+import {makeContact} from './contact.js'
 import './style.css';
 
 const content = document.querySelector('#content');
@@ -28,5 +28,20 @@ content.appendChild(makeNav());
 content.appendChild(makeHome());
 
 function switchPage(e) {
-	console.log(e.target.innerText);
+	(Array.from(content.children)).forEach(child => content.removeChild(child));
+	content.appendChild(makeNav());
+	let page = e.target.innerText;
+	switch(true) {
+		case(page === 'Home'):
+			content.appendChild(makeHome());
+			break;
+		case(page === 'Menu'):
+			content.appendChild(makeMenu());
+			break;
+		case(page === 'Contact'):
+			content.appendChild(makeContact());
+			break;
+		default:
+			return;
+	}
 }
