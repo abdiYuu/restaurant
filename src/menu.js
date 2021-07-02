@@ -14,6 +14,7 @@ class Dish {
 	
 function makeDishCard(dish) {
 	const card = document.createElement('div');
+	card.classList.add('card');
 	const name = document.createElement('h2');
 	const image = document.createElement('img');
 	const description = document.createElement('p');

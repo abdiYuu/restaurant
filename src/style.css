@@ -38,7 +38,7 @@ nav {
 	font-size:1.5rem;
 }
 
-.hero {
+.hero, .menu {
 	width:90%;
 	height:80%;
 	margin:auto;
@@ -49,6 +49,9 @@ nav {
 	border-radius:1.5rem;
 	box-shadow: var(--main-box-shadow);
 }
+.menu {
+	flex-direction:column;
+}
 
 .hero_img {
 	display:none;
@@ -58,6 +61,14 @@ nav {
 	width:40%;
 	margin-right:auto;
 	margin-left:auto;
+}
+
+.card {
+	margin-top:.5rem;
+	margin-left:auto;
+	margin-right:auto;
+	background:#111111;
+	box-shadow:var(--main-box-shadow);
 }
 
 img {
