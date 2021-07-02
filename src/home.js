@@ -19,9 +19,14 @@ function makeHome() {
 	const hero_txt = document.createElement('div');
 	hero_txt.classList.add('hero_txt');
 
-	const about = document.createElement('p');
-	about.innerText = 'Welcome to Molokai';
-	hero_txt.appendChild(about);
+	const title = document.createElement('h1');
+	title.innerText = 'Molokai';
+
+	const para = document.createElement('p');
+	para.innerText = 'Serving the hottest dishes on this side of the equator. Our mission is to make sure each customer leaves with the satisfaction of a hearty meal.';
+
+	hero_txt.appendChild(title);
+	hero_txt.appendChild(para);
 
 	hero.appendChild(hero_txt);
 
