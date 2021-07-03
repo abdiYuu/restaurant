@@ -1,8 +1,8 @@
 'use strict'
 
 import Data from './menu.json'
-
 import './style.css';
+
 
 class Dish {
 	constructor(name, image, description, price) {
@@ -13,10 +13,23 @@ class Dish {
 	}
 }
 
+
+function importImages(r) {
+	let images = {};
+	r.keys().forEach((item, index) => {images[item.replace('./', '')] = r(item); });
+	return images;
+}
+
+const images = importImages(require.context('./menu-images', false, /\.(png|jpg|jpeg|svg)$/))
 	
 function makeDishCard(dish) {
 	const card = document.createElement('div');
 	card.classList.add('card');
+	const text_div = document.createElement('div');
+	text_div.classList.add('card-text');
+	const image_div = document.createElement('div');
+	image_div.classList.add('card-image');
+
 	const name = document.createElement('h2');
 	const image = document.createElement('img');
 	const description = document.createElement('p');
@@ -26,10 +39,14 @@ function makeDishCard(dish) {
 	image.src = dish.image;
 	description.innerText = dish.description;
 	price.innerText = dish.price;
+	
+	image_div.appendChild(image);
+	text_div.appendChild(name);
+	text_div.appendChild(description);
+	text_div.appendChild(price);
 
-	card.appendChild(name);
-	card.appendChild(description);
-	card.appendChild(price);
+	card.appendChild(image_div);
+	card.appendChild(text_div);
 
 	return card;
 }
@@ -39,10 +56,10 @@ function makeMenu() {
 	let menu = document.createElement('div');
 	menu.classList.add('menu');
 	for(let dish of Data) {
-		dish = new Dish(dish.name, dish.img, dish.description, dish.price);
+		let img = images[dish.image];
+		dish = new Dish(dish.name, img, dish.description, dish.price);
 		let card = makeDishCard(dish);
 		menu.appendChild(card);
-		console.log(dish, card);
 	}
 	return menu;
 }
