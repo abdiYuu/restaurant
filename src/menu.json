@@ -1,0 +1,14 @@
+[
+	{
+		"name":"Molten Lava Cake",
+		"image":"img",
+		"description":"Delicious Melted Fudge",
+		"price":"1.99CAD"
+	},
+	{
+		"name":"Molotov Cocktail",
+		"image":"img",
+		"description":"An explosion of refreshing flavour",
+		"price":"1.43 CAD"
+	}
+]

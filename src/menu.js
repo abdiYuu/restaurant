@@ -1,5 +1,7 @@
 'use strict'
 
+import Data from './menu.json'
+
 import './style.css';
 
 class Dish {
@@ -32,15 +34,15 @@ function makeDishCard(dish) {
 	return card;
 }
 
-let dishes = [];
-dishes.push((makeDishCard(new Dish('Molten Lava Cake', 'img', 'Delicious melted fudge', '1.99CAD'))));
 
 function makeMenu() {
 	let menu = document.createElement('div');
 	menu.classList.add('menu');
-	for(let dish of dishes) {
-		menu.appendChild(dish);
-		console.log(dish);
+	for(let dish of Data) {
+		dish = new Dish(dish.name, dish.img, dish.description, dish.price);
+		let card = makeDishCard(dish);
+		menu.appendChild(card);
+		console.log(dish, card);
 	}
 	return menu;
 }
