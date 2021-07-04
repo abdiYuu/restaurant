@@ -3,12 +3,18 @@
 		"name":"Molten Lava Cake",
 		"image":"molten-lava-cake.jpg",
 		"description":"Delicious Melted Fudge",
-		"price":"1.99CAD"
+		"price":"1.99 CAD"
 	},
 	{
 		"name":"Molotov Cocktail",
-		"image":"img",
+		"image":"molotov-cocktail.jpg",
 		"description":"An explosion of refreshing flavour",
 		"price":"1.43 CAD"
+	},
+	{
+		"name":"Chicken Vindaloo",
+		"image":"chicken-vindaloo.jpg",
+		"description":"A hearty and spicy meal of chicken and garlic marinade",
+		"price":"3.59 CAD"
 	}
 ]

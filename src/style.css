@@ -17,6 +17,7 @@ body {
 img {
 	width:100%;
 	height:100%;
+	border-radius:1.5rem;
 }
 
 #content {
@@ -45,7 +46,7 @@ nav {
 
 .hero, .menu {
 	width:90%;
-	height:80%;
+	height:100vh;
 	margin:auto;
 	margin-top:1rem;
 	display:flex;
@@ -54,12 +55,36 @@ nav {
 	border-radius:1.5rem;
 	box-shadow: var(--main-box-shadow);
 }
-.menu {
-	flex-direction:column;
+
+.contact {
+	width:600px;
+	height:50%;
+	margin:auto;
+	margin-top:3rem;
+	background:#292929;
+	color:#FFF;
+	border-radius:1.5rem;
+	box-shadow:var(--main-box-shadow);
+	display:flex;
+	justify-content:space-between;
+}
+
+.contact_info {
+	margin-left:1rem;
+	width:300px;
+}
+
+.contact_img {
+	max-width:300px;
 }
 
 .hero_img {
 	display:none;
+}
+
+.menu {
+	flex-direction:column;
+	align-items:center;
 }
 
 .hero_txt {
@@ -70,28 +95,29 @@ nav {
 
 .card {
 	display:flex;
-	margin-top:.5rem;
-	margin-left:auto;
-	margin-right:auto;
+	width:80%;
+	height:1fr;
 	background:#111111;
 	border-radius:1.5rem;
 	box-shadow:var(--main-box-shadow);
 }
 
 .card-text {
-	width:50%;
+	width:40%;
+	margin-left:10%;
 }
 
 .card-image {
 	width:50%;
 }
 
+
 .home_img {
 	display:none;
 }
 
 
-@media(min-width:500px) {
+@media(min-width:800px) {
 	.nav {
 		flex-direction:row
 	}
@@ -105,5 +131,9 @@ nav {
 		display:inline;
 		border-radius:1.5rem;
 		box-shadow:var(--main-box-shadow);
+	}
+
+	.card {
+		width:30%;
 	}
 }
